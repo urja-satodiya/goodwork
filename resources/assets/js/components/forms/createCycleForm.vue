@@ -4,7 +4,7 @@
     <div class="p-4">
       <div class="p-4">
         <label class="block uppercase tracking-wide text-gray-800 text-xs font-bold mb-2" for="name">
-          Name
+          Name <span class="text-gray-500 capitalize">(required)</span>
         </label>
         <input ref="focusInput" v-model="name" id="name" class="appearance-none block w-full bg-gray-200 text-gray-800 border border-gray-200 rounded py-3 px-4" type="text" placeholder="June Release" required>
       </div>
@@ -23,7 +23,7 @@
     </div>
     <div class="flex flex-row justify-between py-4 px-8 bg-gray-200 rounded">
       <button @click="closeCreateForm" class="text-red-300 hover:font-bold hover:text-red-400">Cancel</button>
-      <button @click="createCycle" class="bg-teal-400 text-white font-medium hover:bg-teal-600 py-4 px-8 rounded">Create</button>
+      <button @click="createCycle" class="bg-indigo-400 text-white font-medium hover:bg-indigo-600 py-4 px-8 rounded">Create</button>
     </div>
   </div>
 

@@ -2,6 +2,7 @@
 
 html {
   font-family: 'Montserrat', sans-serif;
+  font-variant-numeric: tabular-nums;
 }
 
 @tailwind components;
@@ -47,8 +48,12 @@ html {
      height: 50vh;
  }
 
- .h-70-vh {
-     height: 50vh;
+ .h-60-vh {
+     height: 60vh;
+ }
+
+ .h-80-vh {
+     height: 80vh;
  }
 
  .checkbox {
@@ -63,4 +68,12 @@ html {
  .checkbox:checked + label::before {
      @apply bg-indigo-500;
      content: '';
+ }
+
+ .tab-sticky-top {
+     top: 3.25rem;
+ }
+
+ .message-box-max {
+     max-width: calc(100vw - 2rem);
  }

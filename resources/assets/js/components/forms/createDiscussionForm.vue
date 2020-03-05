@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div :class="{'hidden': !formShown}" class="absolute container mx-auto mb-8 w-5/6 md:w-md lg:w-lg xl:w-xl z-10" style="top: 12vh;left: 0;right: 0;">
+  <div :class="{'hidden': !formShown}" class="absolute top-0 left-0 right-0 mt-24 container mx-auto mb-8 w-5/6 md:w-md lg:w-lg xl:w-xl z-30">
     <div class="bg-white rounded shadow-lg">
       <div class="">
         <div class="px-8 pt-8 bg-gray-200 rounded-t">
@@ -49,18 +49,18 @@
       <div class="flex flex-row justify-between px-8 py-4 bg-white rounded-b">
         <button @click="closeEditor" class="no-underline px-3 py-2 my-4 bg-white text-base text-red-400 rounded border-red-400 border">Cancel</button>
         <div v-if="!this.discussion">
-          <button @click="savePost(true)" class="no-underline px-3 py-2 mr-4 my-4 text-teal-400  text-base bg-white font-medium rounded border-teal-400  border">Save as a Draft</button>
-          <button @click="savePost(false)" class="no-underline px-3 py-2 my-4 bg-teal-400 text-base text-white font-medium rounded">Publish</button>
+          <button @click="savePost(true)" class="no-underline px-3 py-2 mr-4 my-4 text-indigo-400  text-base bg-white font-medium rounded border-indigo-400  border">Save as a Draft</button>
+          <button @click="savePost(false)" class="no-underline px-3 py-2 my-4 bg-indigo-400 text-base text-white font-medium rounded">Publish</button>
         </div>
         <div v-if="this.discussion">
-          <button @click="updatePost()" class="no-underline px-3 py-2 my-4 bg-teal-400 text-base text-white font-medium rounded">Save</button>
+          <button @click="updatePost()" class="no-underline px-3 py-2 my-4 bg-indigo-400 text-base text-white font-medium rounded">Save</button>
         </div>
       </div>
     </div>
     <div class="h-16"></div>
   </div>
 
-  <div @click="closeEditor" :class="{'hidden': !formShown}" class="h-screen w-screen fixed inset-0 bg-gray-900 opacity-25"></div>
+  <div @click="closeEditor" :class="{'hidden': !formShown}" class="h-screen w-screen fixed inset-0 bg-gray-900 opacity-25 z-20"></div>
 </div>
 </template>
 
@@ -115,14 +115,13 @@ export default {
           imageUpload: {
             upload: file => {
               let formData = new FormData()
-              formData.append('files[0]', file)
+              formData.append('file', file)
               formData.append('group_type', this.resourceType)
               formData.append('group_id', this.resourceId)
-              formData.append('for_editor', true)
               
               // return a Promise that resolves in a link to the uploaded image
               return new Promise((resolve, reject) => {
-                axios.post('/files',
+                axios.post('/discussions/files',
                   formData,
                   {
                     headers: {
@@ -134,6 +133,8 @@ export default {
                     resolve(response.data.url)
                   })
                   .catch((error) => {
+                    console.error(error);
+                    
                     this.showNotification({type: error.response.data.status, message: error.response.data.message})
                   })
               });
@@ -175,7 +176,7 @@ export default {
         content: this.quill.root.innerHTML,
         raw_content: JSON.stringify(this.quill.getContents()),
         draft: draft,
-        cycle_id: this.cycleId,
+        cycle_id: this.cycleId !== 0 ? this.cycleId : null,
         group_type: this.resourceType,
         group_id: this.resourceId
       })
@@ -219,7 +220,7 @@ export default {
         category_id: this.categoryId,
         content: this.quill.root.innerHTML,
         raw_content: JSON.stringify(this.quill.getContents()),
-        cycle_id: this.cycleId,
+        cycle_id: this.cycleId !== 0 ? this.cycleId : null,
         group_type: this.resourceType,
         group_id: this.resourceId
       })

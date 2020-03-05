@@ -70,7 +70,7 @@
     </div>
     <div class="mb-6">
       <label class="block text-gray-600 text-sm font-bold mb-2" for="weekstart">
-        {{ 'Preffered Language' | localize }}
+        {{ 'Preferred Language' | localize }}
       </label>
       <div class="relative">
         <select v-model='user.lang' class="shadow appearance-none border rounded w-full px-3 py-2 text-gray-700 bg-gray-200" id="weekstart">
@@ -84,7 +84,7 @@
       </div>
     </div>
     <div class="mt-8">
-      <button @click="updateProfile" class="bg-teal-500 hover:bg-teal-600 text-white font-bold p-4 rounded shadow hover:shadow-lg" type="button">
+      <button @click="updateProfile" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold p-4 rounded shadow hover:shadow-lg" type="button">
         {{ 'Update' | localize }}
       </button>
       <div></div>

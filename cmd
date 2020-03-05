@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-COMPOSE="sudo docker-compose"
+COMPOSE="docker-compose"
 
 if [ $# -gt 0 ];then
     if [[ "$1" == "art" ]]; then
@@ -21,6 +21,10 @@ if [ $# -gt 0 ];then
     elif [[ "$1" == "mysql" ]]; then
         shift 1
         $COMPOSE run --rm -w / db mysql "$@"
+    elif [[ "$1" == "restart" ]]; then
+        shift 1
+        $COMPOSE stop
+        $COMPOSE start
     else
         $COMPOSE "$@"
     fi

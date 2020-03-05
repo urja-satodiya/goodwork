@@ -4,8 +4,8 @@ namespace Tests\Feature\IntegrationTest;
 
 use Tests\TestCase;
 use Illuminate\Support\Str;
-use App\Core\Models\Project;
-use App\Core\Models\GithubRepo;
+use App\Base\Models\GithubRepo;
+use App\Project\Models\Project;
 
 class GithubIntegrationTest extends TestCase
 {
@@ -35,7 +35,7 @@ class GithubIntegrationTest extends TestCase
     public function user_can_connect_github_repo_to_project()
     {
         $project = factory(Project::class)->create(['owner_id' => $this->user->id]);
-        $githubRepoId = str_random();
+        $githubRepoId = Str::random();
         $this->actingAs($this->user)
              ->post('/services/github/connected-repos', [
                  'github_repo_id' => $githubRepoId,

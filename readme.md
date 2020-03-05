@@ -1,14 +1,14 @@
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/iluminar/goodwork/blob/dev/LICENSE)
 [![Build Status](https://travis-ci.org/iluminar/goodwork.svg?branch=dev)](https://travis-ci.org/iluminar/goodwork)
 [![Stable Version](https://poser.pugx.org/iluminar/goodwork/v/stable)](https://github.com/iluminar/goodwork)
-[![Laravel Version](https://img.shields.io/badge/Laravel-5.8-brightgreen.svg?style=flat)](https://github.com/laravel/laravel)
+[![Laravel Version](https://img.shields.io/badge/Laravel-6.0-brightgreen.svg?style=flat)](https://github.com/laravel/laravel)
 [![VueJS Version](https://img.shields.io/badge/vue-2.5.13-brightgreen.svg?style=flat)](https://github.com/vuejs/vue)
 [![codecov](https://codecov.io/gh/iluminar/goodwork/branch/master/graph/badge.svg)](https://codecov.io/gh/iluminar/goodwork)
 [![StyleCI](https://styleci.io/repos/81873619/shield?branch=dev&style=flat)](https://styleci.io/repos/81873619)
-[![Join on slack](https://img.shields.io/badge/join%20on-slack-green.svg)](https://join.slack.com/t/iluminar/shared_invite/enQtNDY0Mzc3NDkwOTY1LTJhZTNiYmMxZmE4NGU5MTJhODI5OWMyNjc4ZmIyNDVhODRhMGUzNDU0MmM1OGRmZjBiYWM0NjcwNWRjMDJjNTA)
+[![Join on discord](https://img.shields.io/badge/join%20on-discord-orange)](https://discord.gg/4DvTQsc)
 [![Join on goodwork](https://img.shields.io/badge/join%20on-goodwork-orange.svg)](https://goodworkfor.life/register/invite-link/ovCPAFpnwIhrvqUrlvynarP9HVRBC5mH)
 
-<img src="public/logos/logo.png" alt="Goodwork" style="max-width:100%;">
+<img src="public/logos/logo_square.png" alt="Goodwork" style="max-width:100%;">
 
 Self hosted project management and collaboration tool inspired by basecamp.
 
@@ -35,17 +35,17 @@ Self hosted project management and collaboration tool inspired by basecamp.
 
 ## About Goodwork
 
-Goodwork is a simple project management and collaboration tool for software teams. It is open source and [MIT licensed](https://github.com/iluminar/goodwork/blob/dev/LICENSE). Goodwork is a self-hosted software so no dependency on anyone and only you keep your data.
+Goodwork is a simple project management and collaboration tool for software teams. It is open source and [MIT licensed](https://github.com/iluminar/goodwork/blob/dev/LICENSE). Goodwork is a self-hosted software (no dependency on anyone else and only you keep your data).
 
-Goodwork brings you all the components required for your project to run smoothly in one place so that you have single source of truth. Instead of using a collection of tools or service which makes everything messy and hard to find important details from stuff scattered all over the place, Goodwork organizes everything in a central place where everyone in the company knows what to do, knows where things stand and find stuff without having to ask around all the time.
+Goodwork brings you all the components required for your project to run smoothly in one place so that you have single source of truth. Instead of using a collection of tools or service which makes everything messy with important details being hard to find because stuff is scattered all over the place, Goodwork organizes everything in a central place where everyone in the company knows what to do, knows where things stand and where to find stuff without having to ask around.
 
-> Available in 23 language
+> Goodwork is available in 23 different languages!
 
 [Overview](https://github.com/iluminar/goodwork/wiki/Overview)
 
 ## Demo
 
-You can check out an instance of the application that we use as a guest user using below described email & password. This user has limited permission so you'll only see a handful of the features. Visit this link: https://goodworkfor.life
+You can test a live instance of Goodwork that we use (as a guest user) using the credentials below. This user has limited permissions so you'll only see a handful of the features. You can access the demo site at the following URL: https://goodworkfor.life
 
 `email: guest@example.com`
 
@@ -89,19 +89,21 @@ You can check out an instance of the application that we use as a guest user usi
 
 ## Contributing <small>[↑Top](#about-goodwork)</small>
 
-Thank you for considering contributing to the Goodwork! The contribution guide can be found in the [Contribution Guideline](https://github.com/iluminar/goodwork/wiki/Contribution-Guideline).
+Thank you for considering contributing to the Goodwork Project! The contribution guide can be found in the [Contribution Guideline](https://github.com/iluminar/goodwork/wiki/Contribution-Guideline).
 
-You can join goodwork project via this link [link](https://goodworkfor.life/register/invite-link/ovCPAFpnwIhrvqUrlvynarP9HVRBC5mH)
+You can join the Goodwork Project via this link [link](https://goodworkfor.life/register/invite-link/ovCPAFpnwIhrvqUrlvynarP9HVRBC5mH)
 
-Also you can join the slack channel via this [link](https://join.slack.com/t/iluminar/shared_invite/enQtNDY0Mzc3NDkwOTY1LTJhZTNiYmMxZmE4NGU5MTJhODI5OWMyNjc4ZmIyNDVhODRhMGUzNDU0MmM1OGRmZjBiYWM0NjcwNWRjMDJjNTA)
+Also you can join the slack channel via this [link](https://discord.gg/4DvTQsc)
 
 ## Supporting <small>[↑Top](#about-goodwork)</small>
 
 Goodwork is an MIT-licensed open source project with its ongoing development made possible thanks to the support by our amazing backers.
 
-Support the development of "Goodwork" by being a patron
+Support the development of "Goodwork" by being a sponsor or a backer
 
-<a href="https://www.patreon.com/bePatron?u=19641984"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
+<a href="https://opencollective.com/goodwork#sponsor"><img alt="become a sponsor" src="https://opencollective.com/goodwork/sponsors.svg" height="35px"></a>
+
+<a href="https://opencollective.com/goodwork#sponsor"><img alt="become a backer" src="https://opencollective.com/goodwork/backers.svg" height="35px"></a>
 
 You can also fund specific issues on Issuehunt and the money will be distributed to contributors and maintainers.
 
@@ -121,8 +123,7 @@ If you discover a security vulnerability within Goodwork, please send an e-mail 
 
 - [Full Contributors List](https://github.com/iluminar/goodwork/graphs/contributors)
 
-
-[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/0)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/0)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/1)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/1)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/2)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/2)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/3)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/3)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/4)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/4)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/5)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/5)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/6)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/6)[![](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/images/7)](https://sourcerer.io/fame/Hasnayeen/iluminar/goodwork/links/7)
+![](https://opencollective.com/goodwork/contributors.svg?width=890&button=false)
 
 ## License <small>[↑Top](#about-goodwork)</small>
 

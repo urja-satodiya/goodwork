@@ -1,6 +1,6 @@
 <template>
 <div v-if="taskDetailsShown">
-  <div class="absolute container mx-auto md:max-w-2xl lg:max-w-3xl xl:max-w-4xl z-40 mb-16" style="top: 12vh;left: 0;right: 0;">
+  <div class="absolute top-0 left-0 right-0 mt-24 container mx-auto md:max-w-2xl lg:max-w-3xl xl:max-w-4xl z-40 mb-16">
     <div class="bg-gray-100 rounded shadow-lg py-4">
       <div class="flex flex-row justify-between px-8 pb-2 relative">
         <div @click="closeTaskDetails" class="cursor-pointer">
@@ -75,13 +75,13 @@
       </div>
       <div class="bg-white flex flex-row flex-wrap justify-start px-8 py-2 pb-8">
         <div v-if="task.tags.length === 0" class="text-gray-700">No Tags</div>
-        <div v-else v-for="tag in task.tags" class="bg-teal-200 px-3 py-1 rounded-full text-teal-800 font-medium text-sm mr-4">{{ tag.label }}</div>
+        <div v-else v-for="tag in task.tags" class="bg-indigo-200 px-3 py-1 rounded-full text-indigo-800 font-medium text-sm mr-4">{{ tag.label }}</div>
       </div>
       <div class="flex flex-row justify-around bg-gray-200 py-4 text-gray-600 text-center">
-        <div @click="showColumn('comments')" :class="[activeColumn === 'comments' ? 'border-teal-500 text-teal-500 border-b-2 pb-4 -mb-4' : 'cursor-pointer']" class="w-1/2">
+        <div @click="showColumn('comments')" :class="[activeColumn === 'comments' ? 'border-indigo-500 text-indigo-500 border-b-2 pb-4 -mb-4' : 'cursor-pointer']" class="w-1/2">
           Comments
         </div>
-        <div @click="showColumn('progress')" :class="[activeColumn === 'progress' ? 'border-teal-500 text-teal-500 border-b-2 pb-4 -mb-4': 'cursor-pointer']" class="w-1/2">
+        <div @click="showColumn('progress')" :class="[activeColumn === 'progress' ? 'border-indigo-500 text-indigo-500 border-b-2 pb-4 -mb-4': 'cursor-pointer']" class="w-1/2">
           Progress
         </div>
       </div>
@@ -92,7 +92,7 @@
     </div>
     <div class="h-16"></div>
   </div>
-  <div @click="closeTaskDetails(false)" :class="{'hidden': !taskDetailsShown}" class="h-screen w-screen fixed inset-0 bg-gray-900 opacity-25 z-10"></div>
+  <div @click="closeTaskDetails(false)" :class="{'hidden': !taskDetailsShown}" class="h-screen w-screen fixed inset-0 bg-gray-900 opacity-25 z-20"></div>
 </div>
 </template>
 
@@ -142,6 +142,11 @@ export default {
     faArrowLeft,
     faEllipsisH
   }),
+
+  mounted () {
+    let topElement = document.getElementById('app')
+    topElement.scrollIntoView({behavior: "smooth", block: "start"})
+  },
 
   methods: {
     ...mapActions([

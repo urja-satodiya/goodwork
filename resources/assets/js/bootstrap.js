@@ -22,7 +22,7 @@ if (typeof io !== 'undefined') {
   window.Echo = new Echo({
     broadcaster: 'socket.io',
     host: window.location.hostname + ':6001',
-    namespace: 'App.Core.Events'
+    namespace: 'App.Base.Events'
   })
 }
 
@@ -32,6 +32,18 @@ window.Vue.mixin({
       if (!value) return 'http://' + window.location.host + '/image/avatar.jpg'
       value = value.toString()
       return window.location.protocol + '//' + window.location.host + '/' + value
+    },
+    updateUrl: function (params) {
+      let url = new URL(window.location.href)
+      for (const key in params) {
+        if (url.searchParams.has(key)) {
+          url.searchParams.delete(key)
+        }
+        if (params[key] !== null) {
+          url.searchParams.append(key, params[key])
+        }
+      }
+      window.history.pushState({ path: url.href }, '', url.href)
     }
   }
 })
